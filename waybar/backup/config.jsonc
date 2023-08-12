@@ -1,0 +1,189 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "margin": "10 10 0 10",
+    "modules-left": [
+        "wlr/workspaces"
+    ],
+    "modules-center": [
+       "custom/rofi",
+       "custom/terminal",
+       "custom/firefox",
+       "custom/files",
+       "custom/grim"
+    ],
+    "modules-right": [
+        "tray",
+        "backlight",
+        "pulseaudio",
+        "network",
+        "battery",
+        "clock"
+    ],
+    "custom/launcher": {
+        "format": "",
+        "on-click": "wofi --show drun -o DP-3",
+        "on-click-right": "killall wofi"
+    },
+    "custom/apatheia": {
+        "format": "{}",
+        "exec": "python ~/.config/hypr/themes/minimal/waybar/modules/Apatheia/main.py"
+    },
+    "wlr/workspaces": {
+        "disable-scroll": false,
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+        "on-click": "activate",
+        "format": "{icon}",
+	 	"persistent_workspaces": {
+	 		"1": [],
+	 		"2": [],
+	 		"3": [],
+	 		"4": [],
+	 		"5": [],
+	 		"6": [],
+	 		"7": [],
+	 		"8": [],
+	 		"9": [],
+	 		"10": []
+	},
+         	"format-icons": {
+             		"1": "一",
+             		"2": "二",
+             		"3": "三",
+             		"4": "四",
+             		"5": "五",
+             		"6": "六",
+             		"7": "七",
+             		"8": "八",
+             		"9": "九",
+             		"10": "〇"
+         }
+    },
+    "wlr/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "on-click": "gsimplecal"
+    },
+    "battery": {
+        "format": "{icon}",
+        "format-alt": "{time} {icon} ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "format-charging": "",
+        "interval": 30,
+        "states": {
+            "warning": 25,
+            "critical": 10
+        },
+        "tooltip-format": "At {capacity}%"
+    },
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{bandwidthDownBytes} {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": {
+            "wifi": [
+                "",
+                "",
+                ""
+            ],
+            "ethernet": [
+                ""
+            ],
+            "disconnected": [
+                "睊"
+            ]
+        },
+        "on-click": "nm-connection-editor",
+        "tooltip-format": "{ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "婢",
+        "format-icons": {
+            "phone": [
+                " ",
+                " ",
+                " "
+            ],
+            "default": [
+                "奄",
+                "奔",
+                "墳"
+            ]
+        },
+        "scroll-step": 5,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip-format": "At {volume}%"
+    },
+    "custom/spotify": {
+        "interval": 1,
+        "return-type": "json",
+        "exec": "~/.config/hypr/themes/minimal/waybar/modules/spotify.sh",
+        "exec-if": "pgrep spotify",
+        "escape": true
+    },
+    "custom/storage": {
+        "format": "{} ",
+        "format-alt": "{percentage}% ",
+        "format-alt-click": "click-right",
+        "return-type": "json",
+        "interval": 60,
+        "exec": "~/.config/hypr/themes/minimal/waybar/modules/storage.sh"
+    },
+    "custom/terminal": {
+        "format": "",
+        "on-click": "kitty --title=\"kitty-qalculate\" --hold qalc"
+    }
+    ,
+    "backlight": {
+        "format": "{icon}",
+        "format-alt": "{percent}% {icon}",
+        "format-alt-click": "click-right",
+        "format-icons": [
+            ""
+        ],
+        "on-scroll-down": "light -U 10",
+        "on-scroll-up": "light -A 10"
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "custom/terminal": {
+        "format": "",
+        "on-click": "kitty"
+    },
+    "custom/firefox": {
+        "format": "",
+        "on-click": "firefox"
+    },
+    "custom/files": {
+        "format": "ﱮ",
+        "on-click": "pcmanfm"
+    },
+    "custom/grim": {
+        "format": "",
+        "on-click": "grim -g \"$(slurp)\" - | wl-copy"
+    },
+    "custom/rofi": {
+        "format": "",
+        "on-click": "bash ~/.config/rofi/launcher.sh"
+    }
+}

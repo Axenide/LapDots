@@ -1,0 +1,141 @@
+* {
+    border: none;
+    /*border-radius: 5;*/
+    font-family: Iosevka Nerd Font, Noto Sans CJK;
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #EBDBB2;
+}
+
+#workspaces {
+	background-color: black;
+	/*margin: 0px 10px 0px 10px;*/
+	/*border-radius: 16px;*/
+  border-bottom: solid 1px #EBDBB2;
+  font-weight: bold;
+}
+#workspaces button {
+    padding: 0px 0px;
+    color: #EBDBB2;
+}
+
+#workspaces button.active {
+    color: black;
+    background-color: #EBDBB2;
+    border-radius: 0px;
+}
+
+#workspaces button:hover {
+	background-color: #B8BB26;
+	color: black;
+  border-radius: 0px;
+}
+
+#custom-date, #clock, #battery, #pulseaudio, #network, #custom-randwall {
+	background-color: black;
+  padding: 0px 10px 0px 10px;
+	/*margin: 0px 5px 0px 5px;*/
+  /*border-radius: 16px;*/
+  border-bottom: solid 1px #EBDBB2;
+}
+
+#custom-date {
+	color: #D3869B;
+}
+
+#custom-power {
+	color: #24283b;
+	background-color: #db4b4b;
+	/*border-radius: 5px;*/
+	/*margin-right: 10px;*/
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	/*padding: 5px 10px;*/
+}
+
+#tray {
+    background-color: #000000;
+    /*margin: 0px 10px 0px -5px;*/
+    /*border-radius: 16px;*/
+    padding: 0px 10px 0px 10px;
+    border-bottom: solid 1px #EBDBB2;
+}
+
+#clock {
+    color: #B8BB26;
+    /*border-radius: 16px;*/
+    /*margin-right: 10px;*/
+    /*margin-left: 0px;*/
+    font-weight: bold;
+}
+
+
+#battery {
+    color: #9ece6a;
+}
+
+#battery.charging {
+    color: #9ece6a;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #f7768e;
+    color: #24283b;
+    /*border-radius: 16px;*/
+}
+
+#backlight {
+    background-color: black;
+    color: #83A598;
+    border-bottom: solid 1px #EBDBB2;
+    /*border-radius: 16px;*/
+    /*margin: 5px;*/
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding: 0px 5px 0px 5px;
+}
+
+#network {
+    color: #FB4934;
+    /*border-radius: 16px;*/
+    /*margin-right: 5px;*/
+}
+
+#pulseaudio {
+    color: #FABD2D;
+    /*border-radius: 16px;*/
+    margin-left: 0px;
+}
+
+#pulseaudio.muted {
+    background-color: black;
+    color: #928374;
+    /*border-radius: 16px;*/
+    margin-left: 0px;
+}
+
+#custom-randwall {
+    color: #D3869B;
+    /*border-radius: 16px;*/
+    margin-right: 0px;
+}
+
+#custom-playerctl {
+	background-color: black;
+	padding-left: 10px;
+  padding-right: 10px;
+	/*border-radius: 16px;*/
+  border-bottom: solid 1px #EBDBB2;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  font-style: italic;
+}
